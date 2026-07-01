@@ -3,70 +3,340 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RJ Vision | Where Ideas Become Digital Reality</title>
-  <meta name="description" content="RJ Vision creates modern, responsive and high-performing websites for businesses, startups and creators." />
+  <title>RJ Vision | Building Websites That Grow Businesses</title>
+  <meta name="description" content="RJ Vision creates modern, fast, responsive websites for small businesses, restaurants, studios, clinics, portfolios and companies." />
+  <meta name="keywords" content="RJ Vision, website development, business website, responsive website, Vercel website, Pune web designer, India web development" />
+  <meta name="author" content="RJ Vision" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#05070d; --bg2:#090d18; --card:#0f172a; --text:#f8fafc; --muted:#94a3b8;
-      --blue:#2563eb; --blue2:#38bdf8; --line:rgba(255,255,255,.12); --white:#fff;
-      --shadow:0 30px 80px rgba(37,99,235,.22);
+    :root {
+      --bg: #0B0B0B;
+      --bg2: #111111;
+      --card: rgba(21, 21, 21, 0.78);
+      --emerald: #00C896;
+      --emerald2: #00E6AA;
+      --white: #FFFFFF;
+      --text: #C9C9C9;
+      --muted: #8D8D8D;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 0 45px rgba(0, 200, 150, 0.18);
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1180px,92%);margin:auto}
-    .glow{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.35),transparent 70%);filter:blur(8px);z-index:-1}
-    .nav{position:fixed;top:0;left:0;width:100%;z-index:20;background:rgba(5,7,13,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center;font-weight:900;letter-spacing:.08em;font-family:Poppins}
-    .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#111827 45%,var(--blue));display:grid;place-items:center;box-shadow:var(--shadow);font-weight:900}
-    .links{display:flex;gap:26px;color:var(--muted);font-weight:600;font-size:14px}.links a:hover{color:#fff}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:800;border:1px solid var(--line);transition:.25s}
-    .btn-primary{background:linear-gradient(135deg,var(--blue),#0ea5e9);color:#fff;box-shadow:0 18px 45px rgba(37,99,235,.32)}
-    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 26px 60px rgba(37,99,235,.45)}
-    .btn-outline:hover{background:#fff;color:#020617;transform:translateY(-3px)}
-    .hero{position:relative;min-height:100vh;display:grid;place-items:center;padding:130px 0 80px;background:
-      linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:70px 70px}
-    .hero .glow:nth-child(1){top:110px;left:8%}.hero .glow:nth-child(2){bottom:80px;right:8%}
-    .badge{display:inline-flex;padding:8px 14px;border:1px solid rgba(56,189,248,.28);border-radius:999px;color:#bae6fd;background:rgba(37,99,235,.12);font-weight:700;font-size:13px;margin-bottom:24px}
-    h1{font-family:Poppins;font-size:clamp(48px,8vw,106px);line-height:.95;letter-spacing:-.07em;margin-bottom:24px}
-    .gradient{background:linear-gradient(90deg,#fff,#60a5fa,#fff);-webkit-background-clip:text;color:transparent}
-    .hero p{font-size:clamp(17px,2vw,22px);color:var(--muted);max-width:760px;line-height:1.7;margin-bottom:34px}
-    .hero-content{text-align:center}.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-    section{padding:96px 0;position:relative}.section-title{text-align:center;margin-bottom:54px}.section-title h2{font-family:Poppins;font-size:clamp(34px,5vw,58px);letter-spacing:-.04em;margin-bottom:14px}.section-title p{color:var(--muted);font-size:18px;max-width:680px;margin:auto;line-height:1.7}
-    .grid{display:grid;gap:22px}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:26px;padding:28px;transition:.25s;box-shadow:0 20px 60px rgba(0,0,0,.18)}
-    .card:hover{transform:translateY(-8px);border-color:rgba(56,189,248,.45);box-shadow:var(--shadow)}
-    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(37,99,235,.16);color:#60a5fa;font-size:25px;margin-bottom:20px}
-    .card h3{font-family:Poppins;font-size:22px;margin-bottom:12px}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{list-style:none;display:grid;gap:10px;margin-top:18px}.card li:before{content:'✓ ';color:#38bdf8;font-weight:900}
-    .about{background:linear-gradient(180deg,var(--bg),var(--bg2))}.about-box{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}.about-text p{color:var(--muted);line-height:1.8;font-size:18px;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.stat{padding:28px;border-radius:24px;background:rgba(255,255,255,.05);border:1px solid var(--line);text-align:center}.stat strong{font-size:38px;color:#60a5fa;font-family:Poppins}.stat span{display:block;color:var(--muted);margin-top:6px}
-    .pricing-card{position:relative}.popular{border-color:rgba(37,99,235,.8);box-shadow:var(--shadow)}.tag{position:absolute;top:18px;right:18px;background:var(--blue);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900}.price{font-family:Poppins;font-size:46px;margin:14px 0}.small{color:var(--muted);font-size:14px}.projects .card{min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(135deg,rgba(37,99,235,.22),rgba(255,255,255,.04))}
-    .process{counter-reset:step}.step{position:relative}.step:before{counter-increment:step;content:'0' counter(step);font-family:Poppins;font-size:44px;color:rgba(96,165,250,.28);font-weight:900}
-    .faq-item{border-bottom:1px solid var(--line);padding:24px 0}.faq-item h3{font-size:20px;margin-bottom:8px}.faq-item p{color:var(--muted);line-height:1.7}
-    .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-card{background:linear-gradient(135deg,rgba(37,99,235,.2),rgba(255,255,255,.05));border:1px solid var(--line);border-radius:28px;padding:34px}.contact-card h3{font-family:Poppins;font-size:30px;margin-bottom:16px}.contact-card p{color:var(--muted);line-height:1.7;margin-bottom:18px}.form{display:grid;gap:14px}.form input,.form textarea{width:100%;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;outline:none}.form textarea{min-height:130px;resize:vertical}
-    footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center;background:#03050a}.whatsapp{position:fixed;right:22px;bottom:22px;z-index:30;background:#22c55e;color:white;padding:16px 18px;border-radius:999px;font-weight:900;box-shadow:0 15px 40px rgba(34,197,94,.35)}
-    @media(max-width:900px){.links{display:none}.grid-3,.grid-2,.about-box,.contact-box{grid-template-columns:1fr}.hero{text-align:center}.stats{grid-template-columns:1fr 1fr}}
-    @media(max-width:520px){.stats{grid-template-columns:1fr}.nav-inner{height:68px}.btn{width:100%}.hero-actions{width:100%}}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, 92%); margin: auto; }
+    .glow-bg {
+      position: fixed; inset: 0; z-index: -2;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(0,200,150,.22), transparent 28%),
+        radial-gradient(circle at 82% 12%, rgba(0,230,170,.14), transparent 25%),
+        radial-gradient(circle at 70% 88%, rgba(0,200,150,.12), transparent 30%),
+        #0B0B0B;
+    }
+    .grid-bg {
+      position: fixed; inset: 0; z-index: -1; opacity: .13;
+      background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(11,11,11,.78);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .4px; }
+    .logo-mark {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--emerald), #087a61);
+      color: #07110e; font-family: Poppins, sans-serif; font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+    .nav-links { display: flex; gap: 28px; color: var(--text); font-size: 14px; }
+    .nav-links a:hover { color: var(--emerald2); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 14px;
+      border: 1px solid rgba(0,230,170,.45);
+      transition: .3s ease;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--emerald), var(--emerald2)); color: #06110e; box-shadow: var(--shadow); }
+    .btn-secondary { color: var(--white); background: rgba(255,255,255,.04); }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 0 35px rgba(0,230,170,.35); }
+    .hero { padding: 96px 0 58px; min-height: 86vh; display: flex; align-items: center; }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 60px; align-items: center; }
+    .tag {
+      color: var(--emerald2); font-weight: 800; letter-spacing: .16em; font-size: 12px; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 { font-family: Poppins, sans-serif; line-height: 1.12; }
+    h1 { font-size: clamp(42px, 6vw, 76px); letter-spacing: -2px; margin-bottom: 22px; }
+    h1 span, h2 span { color: var(--emerald2); text-shadow: 0 0 25px rgba(0,230,170,.32); }
+    .hero p { color: var(--text); font-size: 18px; max-width: 620px; margin-bottom: 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 34px; }
+    .features { display: flex; flex-wrap: wrap; gap: 18px; color: var(--text); font-size: 14px; }
+    .features span { display: inline-flex; align-items: center; gap: 8px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--emerald2); box-shadow: 0 0 16px var(--emerald2); }
+    .hero-card {
+      position: relative; min-height: 430px; border: 1px solid var(--border); border-radius: 34px;
+      background: linear-gradient(145deg, rgba(21,21,21,.86), rgba(10,10,10,.7));
+      box-shadow: var(--shadow); overflow: hidden; padding: 26px;
+    }
+    .hero-card:before { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(0,230,170,.22); filter: blur(70px); right: -80px; top: -50px; }
+    .browser {
+      position: relative; z-index: 1; border: 1px solid var(--border); border-radius: 22px; background: rgba(0,0,0,.42); overflow: hidden;
+    }
+    .browser-top { height: 46px; display: flex; align-items: center; gap: 8px; padding: 0 16px; border-bottom: 1px solid var(--border); }
+    .circle { width: 11px; height: 11px; border-radius: 50%; background: var(--emerald); opacity: .8; }
+    .browser-body { padding: 28px; min-height: 300px; }
+    .mock-title { font-size: 34px; font-weight: 800; margin-bottom: 14px; }
+    .mock-line { height: 12px; border-radius: 99px; background: rgba(255,255,255,.15); margin: 14px 0; }
+    .mock-line.short { width: 58%; background: rgba(0,230,170,.45); }
+    .mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+    .mini-card { height: 90px; border-radius: 18px; border: 1px solid rgba(0,230,170,.22); background: rgba(255,255,255,.04); }
+    .stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(255,255,255,.025); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 28px 0; }
+    .stat h3 { color: var(--emerald2); font-size: 32px; }
+    .stat p { color: var(--muted); font-size: 14px; }
+    section { padding: 82px 0; }
+    .section-head { text-align: center; max-width: 700px; margin: 0 auto 44px; }
+    .section-head h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 14px; }
+    .section-head p { color: var(--text); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card {
+      border: 1px solid var(--border); background: var(--card); border-radius: 24px; padding: 30px;
+      transition: .3s ease; backdrop-filter: blur(12px); min-height: 230px;
+    }
+    .card:hover { transform: translateY(-8px); border-color: rgba(0,230,170,.55); box-shadow: var(--shadow); }
+    .icon { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; color: var(--emerald2); background: rgba(0,200,150,.12); font-size: 28px; margin-bottom: 22px; }
+    .card h3 { font-size: 21px; margin-bottom: 10px; }
+    .card p { color: var(--text); font-size: 15px; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .portfolio-card { overflow: hidden; padding: 0; }
+    .portfolio-img { height: 190px; background: linear-gradient(135deg, rgba(0,200,150,.28), rgba(255,255,255,.08)); display: grid; place-items: center; color: var(--emerald2); font-weight: 800; }
+    .portfolio-content { padding: 24px; }
+    .pricing { background: rgba(255,255,255,.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .price-card { position: relative; }
+    .popular { border-color: rgba(0,230,170,.8); box-shadow: var(--shadow); transform: translateY(-10px); }
+    .badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--emerald); color: #06110e; padding: 7px 16px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+    .price { font-size: 42px; font-weight: 800; margin: 18px 0; }
+    .list { list-style: none; margin: 24px 0; display: grid; gap: 12px; color: var(--text); }
+    .list li:before { content: '✓'; color: var(--emerald2); font-weight: 800; margin-right: 10px; }
+    .testimonials .card { min-height: auto; }
+    .stars { color: #FFD447; letter-spacing: 3px; margin-top: 18px; }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 36px; align-items: start; }
+    .contact-item { display: flex; gap: 14px; margin: 20px 0; color: var(--text); }
+    form { display: grid; gap: 14px; }
+    input, textarea {
+      width: 100%; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--border);
+      background: rgba(255,255,255,.045); color: var(--white); outline: none; font-family: inherit;
+    }
+    textarea { min-height: 150px; resize: vertical; }
+    input:focus, textarea:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(0,200,150,.12); }
+    footer { padding: 38px 0; border-top: 1px solid var(--border); color: var(--muted); }
+    .footer-grid { display: flex; justify-content: space-between; gap: 30px; align-items: center; flex-wrap: wrap; }
+    .whatsapp {
+      position: fixed; right: 22px; bottom: 22px; z-index: 20;
+      width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
+      background: linear-gradient(135deg, #25D366, var(--emerald2)); color: #06110e; font-size: 27px; font-weight: 800; box-shadow: 0 0 35px rgba(37,211,102,.5);
+    }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 62px; }
+      .cards, .portfolio-grid, .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) {
+      nav { height: 68px; }
+      .hero-card { min-height: 360px; padding: 16px; }
+      .cards, .portfolio-grid, .stats-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .mock-title { font-size: 26px; }
+      section { padding: 62px 0; }
+    }
   </style>
 </head>
 <body>
-  <nav class="nav"><div class="container nav-inner"><a class="brand" href="#"><span class="logo">RJ</span><span>RJ VISION</span></a><div class="links"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><a class="btn btn-primary" href="https://wa.me/918807534668" target="_blank">Get Quote</a></div></nav>
-  <header class="hero"><span class="glow"></span><span class="glow"></span><div class="container hero-content"><div class="badge">Modern Website Design & Development Agency</div><h1>RJ <span class="gradient">Vision</span></h1><p><strong>Where Ideas Become Digital Reality.</strong><br>We design and develop modern, responsive, and high-performing websites that help businesses stand out online and grow faster.</p><div class="hero-actions"><a class="btn btn-primary" href="#pricing">View Plans</a><a class="btn btn-outline" href="#portfolio">View Work</a></div></div></header>
-  <section class="about" id="about"><div class="container about-box"><div class="about-text"><div class="badge">About RJ Vision</div><h2>We build digital experiences that look premium and perform beautifully.</h2><p>RJ Vision is a creative web design and development agency focused on helping businesses create a strong online presence. From basic websites to premium business websites with maintenance, we deliver clean design, smooth user experience, and mobile-first performance.</p><p>Our mission is simple: turn your ideas into a powerful digital reality.</p></div><div class="stats"><div class="stat"><strong>100%</strong><span>Responsive</span></div><div class="stat"><strong>3</strong><span>Plans</span></div><div class="stat"><strong>24/7</strong><span>Online Presence</span></div><div class="stat"><strong>Fast</strong><span>Loading</span></div></div></div></section>
-  <section id="services"><div class="container"><div class="section-title"><h2>Our Services</h2><p>Everything your business needs to look professional online.</p></div><div class="grid grid-3"><div class="card"><div class="icon">🌐</div><h3>Website Design</h3><p>Modern, attractive and user-friendly website layouts for your brand.</p></div><div class="card"><div class="icon">💻</div><h3>Website Development</h3><p>Fast, responsive and SEO-ready websites built for mobile and desktop.</p></div><div class="card"><div class="icon">🛒</div><h3>Business Websites</h3><p>Professional websites for startups, shops, agencies, creators and local businesses.</p></div><div class="card"><div class="icon">⚡</div><h3>Landing Pages</h3><p>Conversion-focused pages for ads, offers, launches and lead generation.</p></div><div class="card"><div class="icon">🔍</div><h3>Basic SEO</h3><p>Clean structure, fast loading and search-friendly pages.</p></div><div class="card"><div class="icon">🛠️</div><h3>Maintenance</h3><p>Continuous updates, changes, backups and support for your website.</p></div></div></div></section>
-  <section class="projects" id="portfolio"><div class="container"><div class="section-title"><h2>Portfolio Ideas</h2><p>Sample project categories RJ Vision can create for clients.</p></div><div class="grid grid-3"><div class="card"><h3>Restaurant Website</h3><p>Menu, location, WhatsApp and offers.</p></div><div class="card"><h3>Photography Portfolio</h3><p>Gallery, services and booking contact.</p></div><div class="card"><h3>Business Landing Page</h3><p>Premium one-page website for leads.</p></div></div></div></section>
-  <section id="pricing"><div class="container"><div class="section-title"><h2>Website Plans</h2><p>Simple and transparent pricing for different business needs.</p></div><div class="grid grid-3"><div class="card pricing-card"><h3>Basic Plan</h3><div class="price">₹5,000</div><p class="small">Website without custom domain</p><ul><li>1–5 pages website</li><li>Responsive design</li><li>Contact form</li><li>Social media links</li><li>Free Vercel hosting setup</li><li>Basic SEO</li><li>1 revision</li></ul></div><div class="card pricing-card popular"><div class="tag">POPULAR</div><h3>Professional Plan</h3><div class="price">₹10,000</div><p class="small">With custom domain setup</p><ul><li>Everything in Basic</li><li>Up to 10 pages</li><li>Premium design</li><li>WhatsApp integration</li><li>Google Maps</li><li>Advanced SEO</li><li>3 revisions</li><li>Deployment support</li></ul></div><div class="card pricing-card"><h3>Premium Care</h3><div class="price">₹20,000</div><p class="small">With maintenance and continuous changes</p><ul><li>Everything in Professional</li><li>12 months support</li><li>Website maintenance</li><li>Continuous content updates</li><li>Backups and monitoring</li><li>Bug fixes</li><li>Performance optimization</li><li>Up to 2 hours changes/month</li></ul></div></div></div></section>
-  <section id="process"><div class="container"><div class="section-title"><h2>Our Process</h2><p>A simple process from idea to launch.</p></div><div class="grid grid-3 process"><div class="card step"><h3>Consultation</h3><p>We understand your business, goals and website requirements.</p></div><div class="card step"><h3>Design</h3><p>We create a clean, premium layout that matches your brand.</p></div><div class="card step"><h3>Launch</h3><p>We develop, test, deploy and support your website.</p></div></div></div></section>
-  <section id="faq"><div class="container"><div class="section-title"><h2>FAQ</h2><p>Common questions before starting a website project.</p></div><div class="faq-item"><h3>Do I need a domain first?</h3><p>No. We can create your website first and publish it on a free Vercel link. You can buy the domain later.</p></div><div class="faq-item"><h3>Can you connect my custom domain?</h3><p>Yes. In the Professional Plan, we help connect your domain to your website.</p></div><div class="faq-item"><h3>Do you provide maintenance?</h3><p>Yes. The Premium Care Plan includes support, updates, bug fixes and continuous changes.</p></div></div></section>
-  <section id="contact"><div class="container contact-box"><div class="contact-card"><h3>Let’s build your website.</h3><p>Have an idea? RJ Vision can turn it into a professional website that works beautifully on every device.</p><p><strong>Phone/WhatsApp:</strong> +91 88075 34668</p><a class="btn btn-primary" href="https://wa.me/918807534668" target="_blank">Chat on WhatsApp</a></div><div class="contact-card"><form class="form" onsubmit="sendWhatsApp(event)"><input id="name" placeholder="Your Name" required><input id="business" placeholder="Business Name" required><input id="phone" placeholder="Phone Number" required><textarea id="message" placeholder="Tell us about your website requirement" required></textarea><button class="btn btn-primary" type="submit">Send Enquiry</button></form></div></div></section>
-  <footer><div class="container"><p><strong>RJ Vision</strong> — Where Ideas Become Digital Reality.</p><p>© 2026 RJ Vision. All rights reserved.</p></div></footer>
-  <a class="whatsapp" href="https://wa.me/918807534668" target="_blank">WhatsApp</a>
+  <div class="glow-bg"></div>
+  <div class="grid-bg"></div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo"><span class="logo-mark">RJ</span><span>RJ VISION</span></a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="btn btn-secondary" href="#contact">Get In Touch ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="tag">We build digital success</div>
+          <h1>Building Websites That <span>Grow Businesses</span></h1>
+          <p>RJ Vision creates modern, fast and mobile-friendly websites that help small businesses look professional, attract customers and grow online.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get Started ↗</a>
+            <a class="btn btn-secondary" href="#portfolio">View Portfolio ↗</a>
+          </div>
+          <div class="features">
+            <span><i class="dot"></i> Modern Design</span>
+            <span><i class="dot"></i> Fast Loading</span>
+            <span><i class="dot"></i> SEO Ready</span>
+            <span><i class="dot"></i> Mobile Friendly</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="browser">
+            <div class="browser-top"><span class="circle"></span><span class="circle"></span><span class="circle"></span></div>
+            <div class="browser-body">
+              <div class="tag">RJ Vision Studio</div>
+              <div class="mock-title">Digital Solutions For Your Business</div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+              <div class="mock-grid">
+                <div class="mini-card"></div>
+                <div class="mini-card"></div>
+                <div class="mini-card"></div>
+                <div class="mini-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><h3>10+</h3><p>Website Concepts</p></div>
+        <div class="stat"><h3>100%</h3><p>Responsive Design</p></div>
+        <div class="stat"><h3>24/7</h3><p>Online Presence</p></div>
+        <div class="stat"><h3>SEO</h3><p>Basic Setup Included</p></div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Services</div>
+          <h2>What <span>We Do</span></h2>
+          <p>End-to-end website design and development for businesses that want a professional online presence.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="icon">💻</div><h3>Business Websites</h3><p>Professional websites that explain your services and help customers contact you quickly.</p></div>
+          <div class="card"><div class="icon">🛒</div><h3>E-commerce Websites</h3><p>Online store layouts for products, catalogues and conversion-focused product sections.</p></div>
+          <div class="card"><div class="icon">📷</div><h3>Photography Websites</h3><p>Elegant portfolio and gallery websites for studios, photographers and creators.</p></div>
+          <div class="card"><div class="icon">🍽️</div><h3>Restaurant Websites</h3><p>Menu, location, ordering links, WhatsApp button and customer-friendly restaurant pages.</p></div>
+          <div class="card"><div class="icon">🏥</div><h3>Clinic Websites</h3><p>Clean healthcare websites with appointment CTAs, doctor profiles and trust-building sections.</p></div>
+          <div class="card"><div class="icon">🏢</div><h3>Company Websites</h3><p>Corporate websites that present your brand, work, services and contact details professionally.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Portfolio</div>
+          <h2>Our Recent <span>Work</span></h2>
+          <p>Sample website categories RJ Vision can build for local businesses and growing brands.</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="card portfolio-card"><div class="portfolio-img">STUDIO WEBSITE</div><div class="portfolio-content"><h3>Sai Photo Studio</h3><p>Photography studio website with gallery, services and contact section.</p></div></div>
+          <div class="card portfolio-card"><div class="portfolio-img">AGENCY WEBSITE</div><div class="portfolio-content"><h3>RJ Vision</h3><p>Premium agency website with pricing, services and lead generation sections.</p></div></div>
+          <div class="card portfolio-card"><div class="portfolio-img">BUSINESS WEBSITE</div><div class="portfolio-content"><h3>Local Business</h3><p>Fast, responsive website design for shops, clinics, restaurants and companies.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Pricing</div>
+          <h2>Simple, Transparent <span>Pricing</span></h2>
+          <p>Choose the right plan based on your business needs.</p>
+        </div>
+        <div class="cards">
+          <div class="card price-card"><h3>Basic</h3><p>For small businesses</p><div class="price">₹5,000</div><ul class="list"><li>1–5 page website</li><li>Responsive design</li><li>Contact form</li><li>Basic SEO</li><li>Vercel hosting setup</li></ul><a class="btn btn-secondary" href="#contact">Get Started</a></div>
+          <div class="card price-card popular"><div class="badge">Most Popular</div><h3>Professional</h3><p>For growing businesses</p><div class="price">₹10,000</div><ul class="list"><li>Up to 8 pages</li><li>Custom domain setup</li><li>WhatsApp integration</li><li>Analytics basic</li><li>2 revisions</li></ul><a class="btn btn-primary" href="#contact">Get Started</a></div>
+          <div class="card price-card"><h3>Maintenance</h3><p>For regular updates</p><div class="price">₹20,000</div><ul class="list"><li>Monthly updates</li><li>Priority support</li><li>Analytics snapshot</li><li>Uptime check</li><li>6 revisions/quarter</li></ul><a class="btn btn-secondary" href="#contact">Get Started</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Testimonials</div>
+          <h2>What Clients <span>Say</span></h2>
+        </div>
+        <div class="cards">
+          <div class="card"><p>“RJ Vision understood our requirement and delivered a clean, professional website.”</p><div class="stars">★★★★★</div></div>
+          <div class="card"><p>“The design was modern, fast and perfect for our business presentation.”</p><div class="stars">★★★★★</div></div>
+          <div class="card"><p>“Very smooth process from idea to live website with domain setup.”</p><div class="stars">★★★★★</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="tag">Contact</div>
+          <h2>Let's Build Something <span>Amazing</span></h2>
+          <p style="color:var(--text); margin-top:14px;">Have a project in mind? Contact RJ Vision and turn your business idea into a live website.</p>
+          <div class="contact-item"><strong>📧</strong><span>hello@rjvision.in</span></div>
+          <div class="contact-item"><strong>📍</strong><span>India</span></div>
+          <div class="contact-item"><strong>💬</strong><span>WhatsApp available for quick discussion</span></div>
+        </div>
+        <div class="card">
+          <form onsubmit="sendMessage(event)">
+            <input id="name" type="text" placeholder="Your Name" required>
+            <input id="email" type="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Tell us about your website requirement" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message ↗</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="logo"><span class="logo-mark">RJ</span><span>RJ VISION</span></div>
+      <p>© 2026 RJ Vision. Building digital experiences that grow businesses.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hi%20RJ%20Vision,%20I%20need%20a%20website" target="_blank" aria-label="Chat on WhatsApp">☎</a>
+
   <script>
-    function sendWhatsApp(e){e.preventDefault();const n=document.getElementById('name').value;const b=document.getElementById('business').value;const p=document.getElementById('phone').value;const m=document.getElementById('message').value;const text=`Hello RJ Vision,%0A%0AName: ${n}%0ABusiness: ${b}%0APhone: ${p}%0ARequirement: ${m}`;window.open(`https://wa.me/918807534668?text=${text}`,'_blank')}
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const text = `Hi RJ Vision, my name is ${name}. Email: ${email}. Requirement: ${message}`;
+      window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(text)}`, '_blank');
+    }
   </script>
 </body>
 </html>
