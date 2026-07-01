@@ -229,7 +229,22 @@
     }
 
     .stat-icon {
-      width: 40px;
+      width:48px;
+      height:48px;
+      min-width:48px;
+      min-height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      border:1px solid rgba(0,234,138,0.45);
+      background:rgba(0,234,138,0.08);
+      color:var(--green);
+      font-size:22px;
+      font-weight:700;
+      line-height:1;
+      box-shadow:0 0 20px rgba(0,234,138,0.14);
+      flex-shrink:0;
       height: 40px;
       border-radius: 50%;
       display: grid;
@@ -674,10 +689,10 @@
           </div>
 
           <div class="hero-stats">
-            <div class="stat"><span class="stat-icon">✓</span><div><b>100+</b><span>Project Capacity</span></div></div>
-            <div class="stat"><span class="stat-icon">✓</span><div><b>98%</b><span>Client Goal</span></div></div>
-            <div class="stat"><span class="stat-icon">⏱</span><div><b>On-Time</b><span>Delivery</span></div></div>
-            <div class="stat"><span class="stat-icon">☏</span><div><b>24/7</b><span>Support</span></div></div>
+            <div class="stat"><div class="stat-icon">✓</div><div><b>100+</b><span>Project Capacity</span></div></div>
+            <div class="stat"><div class="stat-icon">✓</div><div><b>98%</b><span>Client Goal</span></div></div>
+            <div class="stat"><div class="stat-icon">⏱</div><div><b>On-Time</b><span>Delivery</span></div></div>
+            <div class="stat"><div class="stat-icon">☏</div><div><b>24/7</b><span>Support</span></div></div>
           </div>
         </div>
 
