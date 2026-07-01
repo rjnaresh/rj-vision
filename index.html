@@ -3,763 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RJ Vision | Website Design & Development Agency</title>
-  <meta name="description" content="RJ Vision creates modern, responsive and professional websites for small businesses, startups, restaurants, photographers, clinics and companies." />
-  <meta name="keywords" content="RJ Vision, website design, web development, business website, Pune web designer, India website developer" />
-  <meta name="author" content="RJ Vision" />
+
+  <title>RJ Vision | Digital Growth Agency</title>
+  <meta name="description" content="RJ Vision helps businesses build websites, branding, content, reels promotion and digital marketing strategies." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #050806;
-      --bg-soft: #0b0f0d;
-      --card: rgba(255,255,255,0.045);
-      --card-strong: rgba(255,255,255,0.075);
-      --text: #ffffff;
-      --muted: #b8c4bd;
-      --emerald: #00e68a;
-      --emerald-dark: #00b86b;
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 0 40px rgba(0,230,138,0.22);
-      --radius: 22px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at 80% 10%, rgba(0,230,138,0.22), transparent 30%),
-        radial-gradient(circle at 0% 30%, rgba(0,230,138,0.12), transparent 24%),
-        var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(5, 8, 6, 0.78);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-    }
-
-    .logo-mark {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--emerald), #075c39);
-      color: #031008;
-      font-size: 22px;
-      font-weight: 900;
-      box-shadow: var(--shadow);
-    }
-
-    .logo small {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0;
-      margin-top: -3px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #dce7e1;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--emerald);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border-radius: 14px;
-      padding: 14px 22px;
-      font-weight: 800;
-      font-size: 14px;
-      border: 1px solid var(--emerald);
-      transition: 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--emerald), #31f0a6);
-      color: #031008;
-      box-shadow: var(--shadow);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 55px rgba(0,230,138,0.36);
-    }
-
-    .btn-outline {
-      color: var(--text);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .btn-outline:hover {
-      color: #031008;
-      background: var(--emerald);
-      transform: translateY(-3px);
-    }
-
-    .hero {
-      min-height: calc(100vh - 78px);
-      display: grid;
-      align-items: center;
-      padding: 74px 0 54px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--emerald);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 6vw, 78px);
-      line-height: 1.05;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
-    }
-
-    .gradient-text {
-      color: var(--emerald);
-      text-shadow: 0 0 28px rgba(0,230,138,0.32);
-    }
-
-    .hero p {
-      max-width: 600px;
-      font-size: 18px;
-      color: var(--muted);
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 34px;
-    }
-
-    .features-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      color: #d9e7df;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .features-row span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .check {
-      color: var(--emerald);
-      font-weight: 900;
-    }
-
-    .hero-card {
-      position: relative;
-      min-height: 460px;
-      border-radius: 34px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background:
-        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
-        radial-gradient(circle at 70% 35%, rgba(0,230,138,0.32), transparent 36%);
-      box-shadow: var(--shadow);
-      padding: 36px;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -50%;
-      background: conic-gradient(from 180deg, transparent, rgba(0,230,138,0.3), transparent 30%);
-      animation: spin 8s linear infinite;
-      opacity: 0.8;
-    }
-
-    .hero-card-inner {
-      position: relative;
-      height: 100%;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(0,0,0,0.42);
-      backdrop-filter: blur(20px);
-      padding: 34px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .mock-browser {
-      height: 34px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      margin: -10px -10px 40px;
-      padding: 0 10px 18px;
-    }
-
-    .dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: var(--emerald);
-      opacity: 0.8;
-    }
-
-    .device-title {
-      font-size: 40px;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      font-weight: 900;
-    }
-
-    .device-title span {
-      color: var(--emerald);
-    }
-
-    .mini-card-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 30px;
-    }
-
-    .mini-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .mini-card strong {
-      display: block;
-      color: var(--text);
-      font-size: 18px;
-      margin-bottom: 3px;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    section {
-      padding: 82px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-head {
-      text-align: center;
-      margin-bottom: 44px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.15;
-      letter-spacing: -1.6px;
-      margin-bottom: 10px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      max-width: 620px;
-      margin: auto;
-    }
-
-    .pricing {
-      background:
-        radial-gradient(circle at 50% 0%, rgba(0,230,138,0.14), transparent 35%),
-        rgba(255,255,255,0.01);
-    }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .price-card,
-    .service-card,
-    .why-card,
-    .contact-card {
-      background: linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
-      transition: 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .price-card:hover,
-    .service-card:hover,
-    .why-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(0,230,138,0.55);
-      box-shadow: var(--shadow);
-    }
-
-    .popular {
-      border-color: rgba(0,230,138,0.85);
-      box-shadow: var(--shadow);
-      transform: scale(1.03);
-    }
-
-    .badge {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--emerald);
-      color: #031008;
-      padding: 7px 24px;
-      border-radius: 0 0 14px 14px;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .price-icon {
-      width: 58px;
-      height: 58px;
-      margin: 18px auto 20px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--emerald);
-      border-radius: 50%;
-      color: var(--emerald);
-      font-size: 24px;
-      box-shadow: 0 0 28px rgba(0,230,138,0.22);
-    }
-
-    .price-card h3 {
-      text-align: center;
-      font-size: 21px;
-      margin-bottom: 6px;
-    }
-
-    .amount {
-      text-align: center;
-      font-size: 38px;
-      font-weight: 900;
-      letter-spacing: -1px;
-      margin: 14px 0 24px;
-    }
-
-    .price-card ul {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      color: var(--muted);
-      margin-bottom: 26px;
-      font-size: 14px;
-    }
-
-    .price-card li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .price-card .btn {
-      width: 100%;
-      padding: 13px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      min-height: 225px;
-    }
-
-    .service-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 22px;
-      background: rgba(0,230,138,0.08);
-      color: var(--emerald);
-      font-size: 28px;
-      border: 1px solid rgba(0,230,138,0.3);
-    }
-
-    .service-card h3 {
-      margin-bottom: 10px;
-      font-size: 21px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .stats {
-      padding: 42px 0;
-      background: rgba(255,255,255,0.025);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .stat {
-      text-align: center;
-      padding: 22px;
-      border-right: 1px solid var(--border);
-    }
-
-    .stat:last-child {
-      border-right: 0;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 34px;
-      color: var(--text);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .why-contact {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .why-card h2,
-    .contact-card h2 {
-      font-size: 34px;
-      line-height: 1.18;
-      letter-spacing: -1px;
-      margin-bottom: 12px;
-    }
-
-    .why-card p,
-    .contact-card p {
-      color: var(--muted);
-      margin-bottom: 22px;
-    }
-
-    .why-list {
-      list-style: none;
-      display: grid;
-      gap: 13px;
-      color: #dce7e1;
-      margin-bottom: 26px;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 20px;
-    }
-
-    .contact-info {
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .contact-item b {
-      color: var(--text);
-      display: block;
-    }
-
-    .contact-item span:first-child {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: rgba(0,230,138,0.1);
-      color: var(--emerald);
-      flex: 0 0 auto;
-    }
-
-    form {
-      display: grid;
-      gap: 12px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      background: rgba(0,0,0,0.32);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 15px;
-      color: var(--text);
-      outline: none;
-      font-family: inherit;
-    }
-
-    textarea {
-      min-height: 126px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--emerald);
-      box-shadow: 0 0 0 3px rgba(0,230,138,0.1);
-    }
-
-    footer {
-      padding: 38px 0;
-      background: rgba(0,0,0,0.35);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    footer p,
-    footer a {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: grid;
-      gap: 8px;
-    }
-
-    .footer-links a:hover {
-      color: var(--emerald);
-    }
-
-    .socials {
-      display: flex;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .socials a {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      color: var(--emerald);
-      background: rgba(255,255,255,0.03);
-    }
-
-    .copyright {
-      margin-top: 26px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      z-index: 999;
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--emerald);
-      color: #031008;
-      font-size: 27px;
-      box-shadow: var(--shadow);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-    }
-
-    @media (max-width: 920px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .why-contact,
-      .contact-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        min-height: auto;
-      }
-
-      .price-grid,
-      .services-grid,
-      .stats-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .popular {
-        transform: none;
-      }
-
-      .stat {
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
-      }
-
-      h1 {
-        letter-spacing: -1.8px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .nav {
-        height: 68px;
-      }
-
-      .logo small {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 52px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .mini-card-row {
-        grid-template-columns: 1fr;
-      }
-
-      .price-card,
-      .service-card,
-      .why-card,
-      .contact-card {
-        padding: 22px;
-      }
-    }
+      --bg:#050706; --bg2:#090d0b; --card:rgba(255,255,255,.06); --card2:rgba(255,255,255,.09);
+      --text:#fff; --muted:#aab8b2; --green:#00e98b; --green2:#2dffad; --line:rgba(255,255,255,.12);
+      --shadow:0 0 45px rgba(0,233,139,.25); --max:1180px; --radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,sans-serif;color:var(--text);background:
+      radial-gradient(circle at 78% 18%,rgba(0,233,139,.18),transparent 32%),
+      radial-gradient(circle at 8% 30%,rgba(0,233,139,.10),transparent 28%),
+      linear-gradient(180deg,#040605,#060807 45%,#040605);
+      overflow-x:hidden;line-height:1.65
+    }
+    a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
+    header{position:sticky;top:0;z-index:1000;background:rgba(5,7,6,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{font-size:30px;font-weight:950;letter-spacing:-4px;color:var(--green);text-shadow:0 0 24px rgba(0,233,139,.5)}
+    .brand-text{font-weight:900;letter-spacing:-.8px;font-size:22px}.brand-text small{display:block;font-size:10px;color:var(--muted);font-weight:500;margin-top:-6px;letter-spacing:0}
+    .nav-links{display:flex;gap:28px;color:#dce7e2;font-size:14px;font-weight:700}.nav-links a:hover,.active{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 22px;border-radius:12px;border:1px solid rgba(0,233,139,.55);font-weight:850;font-size:14px;transition:.25s;font-family:inherit;cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,var(--green),var(--green2));color:#031008;box-shadow:var(--shadow)}
+    .btn-outline{background:rgba(255,255,255,.02);color:var(--text)}.btn:hover{transform:translateY(-3px);box-shadow:0 0 52px rgba(0,233,139,.35)}
+    .hero{min-height:calc(100vh - 82px);display:grid;align-items:center;padding:78px 0 42px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:580px;height:580px;border:1px solid rgba(0,233,139,.35);border-radius:50%;right:-170px;top:80px;box-shadow:inset 0 0 80px rgba(0,233,139,.12),0 0 70px rgba(0,233,139,.10)}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;z-index:2}
+    .pill{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(0,233,139,.28);background:rgba(0,233,139,.06);color:var(--green);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.9px;margin-bottom:22px}
+    .pill span{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}
+    h1{font-size:clamp(44px,6vw,76px);line-height:1.04;letter-spacing:-3.4px;margin-bottom:24px}
+    .green{color:var(--green);text-shadow:0 0 28px rgba(0,233,139,.35)}.underline{position:relative;display:inline-block}.underline:after{content:"";position:absolute;height:6px;width:94%;background:linear-gradient(90deg,var(--green),transparent);left:4px;bottom:-8px;border-radius:999px}
+    .hero-copy{max-width:640px;font-size:18px;color:var(--muted);margin-bottom:30px}.actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:34px}
+    .hero-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:720px}.benefit{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px}.benefit strong{display:block;color:#fff;font-size:15px;line-height:1.2}
+    .benefit-icon{width:42px;height:42px;border-radius:15px;display:grid;place-items:center;background:rgba(0,233,139,.08);border:1px solid rgba(0,233,139,.25);color:var(--green);font-size:20px;flex:0 0 auto}
+    .showcase{position:relative;min-height:515px;perspective:1200px}.screen{position:absolute;inset:20px 10px auto 0;border-radius:28px;border:1px solid rgba(255,255,255,.18);background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),radial-gradient(circle at 70% 28%,rgba(0,233,139,.30),transparent 32%);padding:20px;min-height:370px;transform:rotateY(-10deg) rotateX(4deg);box-shadow:0 35px 90px rgba(0,0,0,.55),var(--shadow);overflow:hidden}
+    .screen:before{content:"";position:absolute;width:300px;height:300px;border:2px solid rgba(0,233,139,.42);border-radius:50%;right:26px;top:52px;box-shadow:0 0 40px rgba(0,233,139,.22)}
+    .screen-top{height:30px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);margin-bottom:38px;padding-bottom:14px}.screen-dot{width:10px;height:10px;background:var(--green);border-radius:50%;opacity:.85}
+    .screen-content{position:relative;z-index:2;padding:6px 8px 0}.screen-content h2{font-size:40px;line-height:1.08;letter-spacing:-1.8px;max-width:360px}.screen-content p{color:var(--muted);max-width:360px;margin:18px 0 24px;font-size:14px}
+    .floating-card{position:absolute;right:0;bottom:28px;width:190px;background:rgba(10,17,14,.88);border:1px solid rgba(0,233,139,.35);border-radius:22px;padding:18px;backdrop-filter:blur(16px);box-shadow:var(--shadow);animation:float 4s ease-in-out infinite}.floating-card b{color:var(--green);font-size:28px}.floating-card p{color:var(--muted);font-size:13px;line-height:1.45}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+    .trusted{padding:34px 0;border-bottom:1px solid var(--line);background:rgba(255,255,255,.015)}.trusted p{text-align:center;color:var(--muted);text-transform:uppercase;letter-spacing:1.8px;font-size:12px;margin-bottom:24px}.trusted-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.trusted-item{color:rgba(255,255,255,.45);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;font-weight:900;background:rgba(255,255,255,.025)}
+    section{padding:88px 0;border-bottom:1px solid var(--line)}.section-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:44px;align-items:start}.section-label{display:inline-flex;align-items:center;gap:10px;color:var(--green);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}.section-label:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}.section-title{font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-1.9px;margin-bottom:18px}.section-text{color:var(--muted);font-size:17px;max-width:560px;margin-bottom:30px}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card,.price-card,.contact-info,.contact-form{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.25s;position:relative;overflow:hidden}.card{min-height:248px}.card:hover,.price-card:hover{transform:translateY(-8px);border-color:rgba(0,233,139,.48);box-shadow:var(--shadow)}.card-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;color:var(--green);background:rgba(0,233,139,.08);border:1px solid rgba(0,233,139,.25);font-size:28px;margin-bottom:22px}.card h3{font-size:22px;letter-spacing:-.5px;margin-bottom:12px}.card p{color:var(--muted);font-size:15px;margin-bottom:22px}.card a{color:var(--green);font-weight:850;font-size:14px}
+    .pricing{background:radial-gradient(circle at 50% 0%,rgba(0,233,139,.14),transparent 36%),rgba(255,255,255,.012)}.center{text-align:center}.center .section-text{margin-left:auto;margin-right:auto}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px}.price-card{padding:34px}.price-card.featured{border-color:rgba(0,233,139,.85);box-shadow:var(--shadow);transform:scale(1.035)}.badge{position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--green);color:#031008;font-weight:950;font-size:12px;padding:8px 24px;border-radius:0 0 14px 14px}.price-card h3{font-size:22px;margin-top:12px;text-align:center}.price{text-align:center;font-size:40px;font-weight:950;letter-spacing:-1.4px;margin:14px 0 22px}.price-card ul{list-style:none;display:grid;gap:12px;margin:24px 0 28px;color:var(--muted);font-size:14px}.price-card li{display:flex;align-items:flex-start;gap:10px}.check{color:var(--green);font-weight:950}.price-card .btn{width:100%}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}.step{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:22px;padding:24px}.step span{color:var(--green);font-weight:950;font-size:14px}.step h3{margin:12px 0 8px;font-size:19px}.step p{color:var(--muted);font-size:14px}
+    .contact-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px}.info-list{display:grid;gap:16px;margin-top:26px}.info-item{display:flex;gap:14px;align-items:center;color:var(--muted);font-size:14px}.info-item span{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:rgba(0,233,139,.08);color:var(--green);border:1px solid rgba(0,233,139,.24);flex:0 0 auto}.info-item b{color:#fff;display:block}
+    form{display:grid;gap:14px}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}input,select,textarea{width:100%;min-height:50px;border:1px solid var(--line);border-radius:14px;padding:14px 15px;background:rgba(0,0,0,.32);color:#fff;font-family:inherit;outline:none}textarea{min-height:140px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,233,139,.10)}
+    footer{padding:40px 0;background:rgba(0,0,0,.35)}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}footer p,footer a{color:var(--muted);font-size:14px}.footer-links{display:grid;gap:8px;margin-top:12px}.footer-links a:hover{color:var(--green)}.socials{display:flex;gap:10px;margin-top:14px}.socials a{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--green);background:rgba(255,255,255,.03);font-weight:800}.copyright{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13px}
+    .whatsapp{position:fixed;right:22px;bottom:22px;z-index:999;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--green2));color:#031008;font-size:28px;font-weight:900;box-shadow:var(--shadow);animation:pulse 2s infinite}.chat-bubble{position:fixed;right:90px;bottom:36px;z-index:999;background:#fff;color:#111;border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:0 16px 35px rgba(0,0,0,.25)}.chat-bubble:after{content:"";position:absolute;right:-7px;top:50%;transform:translateY(-50%) rotate(45deg);width:14px;height:14px;background:#fff}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+    @media(max-width:980px){.nav-links{display:none}.hero-grid,.section-grid,.contact-wrap{grid-template-columns:1fr}.showcase{min-height:440px}.price-grid,.process-grid,.trusted-grid{grid-template-columns:repeat(2,1fr)}.price-card.featured{transform:none}}
+    @media(max-width:680px){.nav{height:72px}.brand-text small{display:none}h1{letter-spacing:-2px}.hero{padding-top:52px}.hero-benefits,.cards,.price-grid,.process-grid,.trusted-grid,.footer-grid,.field-row{grid-template-columns:1fr}.actions{flex-direction:column}.btn{width:100%}.showcase{min-height:360px}.screen{inset:0;transform:none;min-height:330px}.screen-content h2{font-size:31px}.floating-card,.chat-bubble{display:none}section{padding:64px 0}.card,.price-card,.contact-info,.contact-form{padding:24px}}
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
-      <a class="logo" href="#home" aria-label="RJ Vision Home">
-        <span class="logo-mark">RJ</span>
-        <span>
-          RJ VISION
-          <small>Where Ideas Become Digital Reality</small>
-        </span>
+      <a href="#home" class="brand">
+        <div class="brand-mark">RJ</div>
+        <div class="brand-text">VISION<small>Where Ideas Become Digital Reality</small></div>
       </a>
-
       <nav class="nav-links">
-        <a class="active" href="#home">Home</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#services">Services</a>
+        <a href="#home" class="active">Home</a>
         <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <a class="btn btn-outline" href="#contact">Let's Talk ↗</a>
+      <a class="btn btn-outline" href="#contact">Let's Talk →</a>
     </div>
   </header>
 
@@ -767,300 +88,163 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Web Design & Development Agency</div>
-          <h1>Building Websites That <span class="gradient-text">Grow Businesses</span></h1>
-          <p>
-            We design and develop modern, fast and responsive websites that help businesses
-            attract more customers, build trust and grow online.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#pricing">Get Started ↗</a>
-            <a class="btn btn-outline" href="#contact">Contact Us ↗</a>
+          <div class="pill"><span></span> Digital solutions that drive growth</div>
+          <h1>Where Ideas Become <span class="green underline">Digital</span> Reality</h1>
+          <p class="hero-copy">RJ Vision helps businesses build, grow and scale with powerful websites, branding, reels promotion, content creation and smart digital marketing strategies.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#services">Explore Services →</a>
+            <a class="btn btn-outline" href="#pricing">View Pricing →</a>
           </div>
-
-          <div class="features-row">
-            <span><b class="check">✓</b> Modern Design</span>
-            <span><b class="check">✓</b> Lightning Fast</span>
-            <span><b class="check">✓</b> SEO Optimized</span>
-            <span><b class="check">✓</b> Mobile Friendly</span>
+          <div class="hero-benefits">
+            <div class="benefit"><span class="benefit-icon">🚀</span><p><strong>Fast Delivery</strong>On-time, every time</p></div>
+            <div class="benefit"><span class="benefit-icon">◆</span><p><strong>Premium Quality</strong>Clean modern designs</p></div>
+            <div class="benefit"><span class="benefit-icon">☏</span><p><strong>Support</strong>We help you grow</p></div>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Website design preview">
-          <div class="hero-card-inner">
-            <div>
-              <div class="mock-browser">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-              <div class="device-title">
-                We Build <span>Digital Experiences</span> That Drive Results.
-              </div>
-            </div>
-
-            <div class="mini-card-row">
-              <div class="mini-card">
-                <strong>95+</strong>
-                Performance Score
-              </div>
-              <div class="mini-card">
-                <strong>100%</strong>
-                Responsive Layout
-              </div>
-              <div class="mini-card">
-                <strong>SEO</strong>
-                Search Ready
-              </div>
-              <div class="mini-card">
-                <strong>24/7</strong>
-                Online Presence
-              </div>
+        <div class="showcase">
+          <div class="screen">
+            <div class="screen-top"><span class="screen-dot"></span><span class="screen-dot"></span><span class="screen-dot"></span></div>
+            <div class="screen-content">
+              <h2>We Build <span class="green">Brands</span> That Inspire.</h2>
+              <p>Websites, branding, content and growth systems designed to help local businesses look professional online.</p>
+              <a class="btn btn-primary" href="#contact">Start Project →</a>
             </div>
           </div>
+          <div class="floating-card"><b>120%</b><p>Stronger digital presence with the right website and promotion strategy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trusted">
+      <div class="container">
+        <p>Built for businesses of all sizes</p>
+        <div class="trusted-grid">
+          <div class="trusted-item">Retail Shops</div><div class="trusted-item">Restaurants</div><div class="trusted-item">Studios</div><div class="trusted-item">Clinics</div><div class="trusted-item">Startups</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container section-grid">
+        <div>
+          <div class="section-label">About RJ Vision</div>
+          <h2 class="section-title">A Digital Growth Partner For Modern Businesses</h2>
+          <p class="section-text">We are not just a website company. RJ Vision helps businesses create a professional online presence, attract customers, promote products and build a brand people trust.</p>
+          <a class="btn btn-outline" href="#contact">Work With Us →</a>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">🌐</div><h3>Web Presence</h3><p>Professional websites and digital stores that make businesses look trustworthy online.</p><a href="#services">Learn More →</a></article>
+          <article class="card"><div class="card-icon">📱</div><h3>Social Growth</h3><p>Reels, posts and promotional content to help businesses stay active and visible.</p><a href="#services">Learn More →</a></article>
+          <article class="card"><div class="card-icon">🎨</div><h3>Brand Identity</h3><p>Logo, colors, graphics and visual style that make a business memorable.</p><a href="#services">Learn More →</a></article>
+          <article class="card"><div class="card-icon">📈</div><h3>Growth Strategy</h3><p>Practical marketing ideas, local promotion and digital plans for business growth.</p><a href="#services">Learn More →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container section-grid">
+        <div>
+          <div class="section-label">What We Do</div>
+          <h2 class="section-title">Complete Digital Solutions For Your Business</h2>
+          <p class="section-text">From websites to reels promotion, we provide everything a business needs to grow in the digital world.</p>
+          <a class="btn btn-outline" href="#pricing">View Packages →</a>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">💻</div><h3>Website Development</h3><p>Business websites, landing pages, catalog websites and custom web applications.</p><a href="#contact">Get Website →</a></article>
+          <article class="card"><div class="card-icon">✍</div><h3>Branding & Design</h3><p>Logo design, brand colors, posters, banners, business cards and identity design.</p><a href="#contact">Build Brand →</a></article>
+          <article class="card"><div class="card-icon">🎬</div><h3>Content Creation</h3><p>Instagram reels, product videos, social posts and promotional creatives.</p><a href="#contact">Create Content →</a></article>
+          <article class="card"><div class="card-icon">📢</div><h3>Digital Marketing</h3><p>Local SEO, Google Business Profile support, online promotions and growth strategy.</p><a href="#contact">Grow Online →</a></article>
         </div>
       </div>
     </section>
 
     <section class="pricing" id="pricing">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Pricing Plans</div>
-          <h2>Simple, Transparent Pricing</h2>
-          <p>Choose the right plan for your business needs.</p>
+        <div class="center">
+          <div class="section-label" style="justify-content:center;">Pricing</div>
+          <h2 class="section-title">Simple Packages To Start</h2>
+          <p class="section-text">Choose a package based on your business needs. Custom projects can be quoted separately.</p>
         </div>
-
         <div class="price-grid">
           <article class="price-card">
-            <div class="price-icon">✦</div>
-            <h3>Basic Plan</h3>
-            <div class="amount">₹5,000</div>
-            <ul>
-              <li><span class="check">✓</span> 1–5 page website</li>
-              <li><span class="check">✓</span> Responsive design</li>
-              <li><span class="check">✓</span> Contact form</li>
-              <li><span class="check">✓</span> Social media links</li>
-              <li><span class="check">✓</span> Basic SEO</li>
-              <li><span class="check">✓</span> 1 revision</li>
-              <li><span class="check">✓</span> No domain / business email</li>
-            </ul>
-            <a class="btn btn-outline" href="#contact">Get Started ↗</a>
+            <h3>Basic Website</h3><div class="price">₹5,000</div>
+            <ul><li><span class="check">✓</span> 1–5 page responsive website</li><li><span class="check">✓</span> Contact form</li><li><span class="check">✓</span> Social media links</li><li><span class="check">✓</span> Basic SEO setup</li><li><span class="check">✓</span> Vercel hosting setup</li><li><span class="check">✓</span> 1 revision</li></ul>
+            <a class="btn btn-outline" href="#contact">Start Basic →</a>
           </article>
-
-          <article class="price-card popular">
-            <div class="badge">Most Popular</div>
-            <div class="price-icon">🚀</div>
-            <h3>Professional Plan</h3>
-            <div class="amount">₹10,000</div>
-            <ul>
-              <li><span class="check">✓</span> Everything in Basic Plan</li>
-              <li><span class="check">✓</span> Custom domain setup</li>
-              <li><span class="check">✓</span> Up to 8 pages</li>
-              <li><span class="check">✓</span> Branded email setup guidance</li>
-              <li><span class="check">✓</span> Basic analytics</li>
-              <li><span class="check">✓</span> 2 revisions</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Get Started ↗</a>
+          <article class="price-card featured">
+            <div class="badge">Recommended</div><h3>Professional Website</h3><div class="price">₹10,000</div>
+            <ul><li><span class="check">✓</span> Everything in Basic</li><li><span class="check">✓</span> Custom domain setup</li><li><span class="check">✓</span> Up to 8 pages</li><li><span class="check">✓</span> Premium design sections</li><li><span class="check">✓</span> Basic analytics guidance</li><li><span class="check">✓</span> 2 revisions</li></ul>
+            <a class="btn btn-primary" href="#contact">Start Professional →</a>
           </article>
-
           <article class="price-card">
-            <div class="price-icon">♛</div>
-            <h3>Maintenance Plan</h3>
-            <div class="amount">₹20,000</div>
-            <ul>
-              <li><span class="check">✓</span> Continuous changes</li>
-              <li><span class="check">✓</span> Monthly updates</li>
-              <li><span class="check">✓</span> Priority support</li>
-              <li><span class="check">✓</span> Analytics monthly snapshot</li>
-              <li><span class="check">✓</span> Uptime monitoring</li>
-              <li><span class="check">✓</span> 6 revisions / quarter</li>
-            </ul>
-            <a class="btn btn-outline" href="#contact">Get Started ↗</a>
+            <h3>Monthly Growth</h3><div class="price">₹20,000</div>
+            <ul><li><span class="check">✓</span> Website maintenance</li><li><span class="check">✓</span> Monthly updates</li><li><span class="check">✓</span> Content/reels support</li><li><span class="check">✓</span> Priority support</li><li><span class="check">✓</span> Analytics snapshot</li><li><span class="check">✓</span> 6 revisions / quarter</li></ul>
+            <a class="btn btn-outline" href="#contact">Discuss Growth →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="services">
+    <section id="process">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Services</div>
-          <h2>What We Do</h2>
-          <p>We provide end-to-end digital solutions for your business.</p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Business Websites</h3>
-            <p>Professional websites that build trust and grow your business online.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🛒</div>
-            <h3>E-commerce Websites</h3>
-            <p>Sell products online with clean layouts and powerful store pages.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">📷</div>
-            <h3>Photography Websites</h3>
-            <p>Showcase your photos with elegant galleries and mobile-first design.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🍽️</div>
-            <h3>Restaurant Websites</h3>
-            <p>Attract more customers with menu, location, timing and WhatsApp links.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🏥</div>
-            <h3>Clinic Websites</h3>
-            <p>Build trust with patients using clean, modern and informative pages.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">🏢</div>
-            <h3>Company Websites</h3>
-            <p>Corporate websites that represent your brand professionally.</p>
-          </article>
+        <div class="center"><div class="section-label" style="justify-content:center;">Our Process</div><h2 class="section-title">From Idea To Digital Reality</h2><p class="section-text">We keep the process simple, transparent and focused on business results.</p></div>
+        <div class="process-grid">
+          <div class="step"><span>01</span><h3>Understand</h3><p>We understand your business, audience, goals and requirements.</p></div>
+          <div class="step"><span>02</span><h3>Design</h3><p>We create a clean, modern and mobile-friendly website structure.</p></div>
+          <div class="step"><span>03</span><h3>Build</h3><p>We develop the website and prepare it for fast hosting.</p></div>
+          <div class="step"><span>04</span><h3>Launch</h3><p>We deploy, connect domain and help your business go live.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="container stats-grid">
-        <div class="stat">
-          <strong>50+</strong>
-          <span>Projects Capacity</span>
-        </div>
-        <div class="stat">
-          <strong>30+</strong>
-          <span>Business Niches</span>
-        </div>
-        <div class="stat">
-          <strong>2+</strong>
-          <span>Years Experience</span>
-        </div>
-        <div class="stat">
-          <strong>98%</strong>
-          <span>Client Satisfaction Goal</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container why-contact">
-        <article class="why-card">
-          <div class="eyebrow">About Us</div>
-          <h2>Why Choose RJ Vision?</h2>
-          <p>
-            We are passionate about creating digital experiences that not only look amazing
-            but also deliver practical business results.
-          </p>
-
-          <ul class="why-list">
-            <li><span class="check">✓</span> User-centered designs</li>
-            <li><span class="check">✓</span> 100% responsive websites</li>
-            <li><span class="check">✓</span> Fast loading performance</li>
-            <li><span class="check">✓</span> SEO-friendly structure</li>
-            <li><span class="check">✓</span> Ongoing website support</li>
-          </ul>
-
-          <a class="btn btn-outline" href="#contact">Learn More ↗</a>
-        </article>
-
-        <article class="contact-card" id="contact">
-          <div class="eyebrow">Let's Connect</div>
-          <h2>Let's Build Something Amazing</h2>
-          <p>Have a project in mind? Let's talk and bring your ideas to life.</p>
-
-          <div class="contact-layout">
-            <div class="contact-info">
-              <div class="contact-item">
-                <span>☏</span>
-                <p><b>WhatsApp</b>+91 12345 67890</p>
-              </div>
-              <div class="contact-item">
-                <span>✉</span>
-                <p><b>Email</b>info@rjvision.in</p>
-              </div>
-              <div class="contact-item">
-                <span>⌖</span>
-                <p><b>Location</b>India</p>
-              </div>
-            </div>
-
-            <form onsubmit="sendMessage(event)">
-              <input id="name" type="text" placeholder="Your Name" required />
-              <input id="email" type="email" placeholder="Your Email" required />
-              <textarea id="message" placeholder="Your Message" required></textarea>
-              <button class="btn btn-primary" type="submit">Send Message ↗</button>
-            </form>
+    <section id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-info">
+          <div class="section-label">Let's Connect</div>
+          <h2 class="section-title">Ready To Grow Your Business Online?</h2>
+          <p class="section-text">Tell us about your business idea. We will help you turn it into a professional digital presence.</p>
+          <div class="info-list">
+            <div class="info-item"><span>☏</span><p><b>WhatsApp</b>+91 88075 34668</p></div>
+            <div class="info-item"><span>✉</span><p><b>Email</b>rjvision@gmail.com</p></div>
+            <div class="info-item"><span>⌖</span><p><b>Location</b>India</p></div>
           </div>
-        </article>
+        </div>
+        <div class="contact-form">
+          <form onsubmit="sendWhatsApp(event)">
+            <div class="field-row"><input id="name" type="text" placeholder="Your Name" required><input id="phone" type="tel" placeholder="Phone Number" required></div>
+            <div class="field-row"><input id="business" type="text" placeholder="Business Name"><select id="service"><option>Website Development</option><option>Branding & Design</option><option>Content Creation / Reels</option><option>Digital Marketing</option><option>Complete Growth Package</option></select></div>
+            <textarea id="message" placeholder="Tell us about your project" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message →</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-grid">
-      <div>
-        <a class="logo" href="#home">
-          <span class="logo-mark">RJ</span>
-          <span>
-            RJ VISION
-            <small>Where Ideas Become Digital Reality</small>
-          </span>
-        </a>
-        <p style="margin-top:14px;max-width:360px;">
-          Building professional websites for businesses that want to grow online.
-        </p>
-      </div>
-
-      <div>
-        <h4>Quick Links</h4>
-        <div class="footer-links" style="margin-top:12px;">
-          <a href="#home">Home</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#services">Services</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-
-      <div>
-        <h4>Follow Us</h4>
-        <div class="socials">
-          <a href="#" aria-label="Instagram">◎</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="GitHub">⌘</a>
-          <a href="https://wa.me/911234567890" aria-label="WhatsApp">☏</a>
-        </div>
-      </div>
+      <div><a href="#home" class="brand"><div class="brand-mark">RJ</div><div class="brand-text">VISION<small>Where Ideas Become Digital Reality</small></div></a><p style="margin-top:14px;max-width:370px;">RJ Vision helps businesses build websites, create content, promote online and grow digitally.</p></div>
+      <div><h4>Quick Links</h4><div class="footer-links"><a href="#about">About Us</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#contact">Contact</a></div></div>
+      <div><h4>Follow Us</h4><div class="socials"><a href="#">◎</a><a href="#">in</a><a href="#">⌘</a><a href="https://wa.me/918807534668">☏</a></div></div>
     </div>
-
-    <div class="container copyright">
-      © 2026 RJ Vision. All Rights Reserved.
-    </div>
+    <div class="container copyright">© 2026 RJ Vision. All Rights Reserved.</div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/911234567890" target="_blank" aria-label="Chat on WhatsApp">☏</a>
+  <div class="chat-bubble">Hi! How can we help you?</div>
+  <a class="whatsapp" href="https://wa.me/918807534668" target="_blank">☏</a>
 
   <script>
-    function sendMessage(event) {
+    function sendWhatsApp(event){
       event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const phoneNumber = "911234567890";
-      const text = `Hello RJ Vision,%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
-
-      window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+      const name=document.getElementById("name").value.trim();
+      const phone=document.getElementById("phone").value.trim();
+      const business=document.getElementById("business").value.trim();
+      const service=document.getElementById("service").value;
+      const message=document.getElementById("message").value.trim();
+      const rjVisionPhone="918807534668";
+      const text="Hello RJ Vision,%0A%0A"+"Name: "+encodeURIComponent(name)+"%0A"+"Phone: "+encodeURIComponent(phone)+"%0A"+"Business: "+encodeURIComponent(business||"Not mentioned")+"%0A"+"Service Needed: "+encodeURIComponent(service)+"%0A"+"Message: "+encodeURIComponent(message);
+      window.open("https://wa.me/"+rjVisionPhone+"?text="+text,"_blank");
     }
   </script>
 </body>
