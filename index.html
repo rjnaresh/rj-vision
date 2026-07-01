@@ -3,222 +3,819 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RJ Vision | Building Websites That Grow Businesses</title>
-  <meta name="description" content="RJ Vision creates modern, fast, responsive websites for small businesses, restaurants, studios, clinics, portfolios and companies." />
-  <meta name="keywords" content="RJ Vision, website development, business website, responsive website, Vercel website, Pune web designer, India web development" />
+  <title>RJ Vision | Website Design & Development Agency</title>
+  <meta name="description" content="RJ Vision creates modern, responsive and professional websites for small businesses, startups, restaurants, photographers, clinics and companies." />
+  <meta name="keywords" content="RJ Vision, website design, web development, business website, Pune web designer, India website developer" />
   <meta name="author" content="RJ Vision" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0B0B0B;
-      --bg2: #111111;
-      --card: rgba(21, 21, 21, 0.78);
-      --emerald: #00C896;
-      --emerald2: #00E6AA;
-      --white: #FFFFFF;
-      --text: #C9C9C9;
-      --muted: #8D8D8D;
+      --bg: #050806;
+      --bg-soft: #0b0f0d;
+      --card: rgba(255,255,255,0.045);
+      --card-strong: rgba(255,255,255,0.075);
+      --text: #ffffff;
+      --muted: #b8c4bd;
+      --emerald: #00e68a;
+      --emerald-dark: #00b86b;
       --border: rgba(255,255,255,0.12);
-      --shadow: 0 0 45px rgba(0, 200, 150, 0.18);
+      --shadow: 0 0 40px rgba(0,230,138,0.22);
+      --radius: 22px;
+      --max: 1180px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--white);
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(0,230,138,0.22), transparent 30%),
+        radial-gradient(circle at 0% 30%, rgba(0,230,138,0.12), transparent 24%),
+        var(--bg);
+      color: var(--text);
       overflow-x: hidden;
       line-height: 1.6;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1180px, 92%); margin: auto; }
-    .glow-bg {
-      position: fixed; inset: 0; z-index: -2;
-      background:
-        radial-gradient(circle at 15% 18%, rgba(0,200,150,.22), transparent 28%),
-        radial-gradient(circle at 82% 12%, rgba(0,230,170,.14), transparent 25%),
-        radial-gradient(circle at 70% 88%, rgba(0,200,150,.12), transparent 30%),
-        #0B0B0B;
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .grid-bg {
-      position: fixed; inset: 0; z-index: -1; opacity: .13;
-      background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: linear-gradient(to bottom, black, transparent 90%);
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
     }
+
     header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(11,11,11,.78);
-      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(5, 8, 6, 0.78);
+      backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
     }
-    nav { height: 76px; display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .4px; }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
     .logo-mark {
-      width: 42px; height: 42px; border-radius: 12px;
-      display: grid; place-items: center;
-      background: linear-gradient(135deg, var(--emerald), #087a61);
-      color: #07110e; font-family: Poppins, sans-serif; font-weight: 800;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--emerald), #075c39);
+      color: #031008;
+      font-size: 22px;
+      font-weight: 900;
       box-shadow: var(--shadow);
     }
-    .nav-links { display: flex; gap: 28px; color: var(--text); font-size: 14px; }
-    .nav-links a:hover { color: var(--emerald2); }
+
+    .logo small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-top: -3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #dce7e1;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--emerald);
+    }
+
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 14px;
-      border: 1px solid rgba(0,230,170,.45);
-      transition: .3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 14px;
+      padding: 14px 22px;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid var(--emerald);
+      transition: 0.25s ease;
+      cursor: pointer;
     }
-    .btn-primary { background: linear-gradient(135deg, var(--emerald), var(--emerald2)); color: #06110e; box-shadow: var(--shadow); }
-    .btn-secondary { color: var(--white); background: rgba(255,255,255,.04); }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 0 35px rgba(0,230,170,.35); }
-    .hero { padding: 96px 0 58px; min-height: 86vh; display: flex; align-items: center; }
-    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 60px; align-items: center; }
-    .tag {
-      color: var(--emerald2); font-weight: 800; letter-spacing: .16em; font-size: 12px; text-transform: uppercase;
-      margin-bottom: 20px;
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--emerald), #31f0a6);
+      color: #031008;
+      box-shadow: var(--shadow);
     }
-    h1, h2, h3 { font-family: Poppins, sans-serif; line-height: 1.12; }
-    h1 { font-size: clamp(42px, 6vw, 76px); letter-spacing: -2px; margin-bottom: 22px; }
-    h1 span, h2 span { color: var(--emerald2); text-shadow: 0 0 25px rgba(0,230,170,.32); }
-    .hero p { color: var(--text); font-size: 18px; max-width: 620px; margin-bottom: 30px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 34px; }
-    .features { display: flex; flex-wrap: wrap; gap: 18px; color: var(--text); font-size: 14px; }
-    .features span { display: inline-flex; align-items: center; gap: 8px; }
-    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--emerald2); box-shadow: 0 0 16px var(--emerald2); }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 55px rgba(0,230,138,0.36);
+    }
+
+    .btn-outline {
+      color: var(--text);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .btn-outline:hover {
+      color: #031008;
+      background: var(--emerald);
+      transform: translateY(-3px);
+    }
+
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: grid;
+      align-items: center;
+      padding: 74px 0 54px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--emerald);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      color: var(--emerald);
+      text-shadow: 0 0 28px rgba(0,230,138,0.32);
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .features-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: #d9e7df;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .features-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .check {
+      color: var(--emerald);
+      font-weight: 900;
+    }
+
     .hero-card {
-      position: relative; min-height: 430px; border: 1px solid var(--border); border-radius: 34px;
-      background: linear-gradient(145deg, rgba(21,21,21,.86), rgba(10,10,10,.7));
-      box-shadow: var(--shadow); overflow: hidden; padding: 26px;
+      position: relative;
+      min-height: 460px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
+        radial-gradient(circle at 70% 35%, rgba(0,230,138,0.32), transparent 36%);
+      box-shadow: var(--shadow);
+      padding: 36px;
     }
-    .hero-card:before { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(0,230,170,.22); filter: blur(70px); right: -80px; top: -50px; }
-    .browser {
-      position: relative; z-index: 1; border: 1px solid var(--border); border-radius: 22px; background: rgba(0,0,0,.42); overflow: hidden;
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 180deg, transparent, rgba(0,230,138,0.3), transparent 30%);
+      animation: spin 8s linear infinite;
+      opacity: 0.8;
     }
-    .browser-top { height: 46px; display: flex; align-items: center; gap: 8px; padding: 0 16px; border-bottom: 1px solid var(--border); }
-    .circle { width: 11px; height: 11px; border-radius: 50%; background: var(--emerald); opacity: .8; }
-    .browser-body { padding: 28px; min-height: 300px; }
-    .mock-title { font-size: 34px; font-weight: 800; margin-bottom: 14px; }
-    .mock-line { height: 12px; border-radius: 99px; background: rgba(255,255,255,.15); margin: 14px 0; }
-    .mock-line.short { width: 58%; background: rgba(0,230,170,.45); }
-    .mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
-    .mini-card { height: 90px; border-radius: 18px; border: 1px solid rgba(0,230,170,.22); background: rgba(255,255,255,.04); }
-    .stats { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(255,255,255,.025); }
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 28px 0; }
-    .stat h3 { color: var(--emerald2); font-size: 32px; }
-    .stat p { color: var(--muted); font-size: 14px; }
-    section { padding: 82px 0; }
-    .section-head { text-align: center; max-width: 700px; margin: 0 auto 44px; }
-    .section-head h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 14px; }
-    .section-head p { color: var(--text); }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .card {
-      border: 1px solid var(--border); background: var(--card); border-radius: 24px; padding: 30px;
-      transition: .3s ease; backdrop-filter: blur(12px); min-height: 230px;
+
+    .hero-card-inner {
+      position: relative;
+      height: 100%;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.42);
+      backdrop-filter: blur(20px);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .card:hover { transform: translateY(-8px); border-color: rgba(0,230,170,.55); box-shadow: var(--shadow); }
-    .icon { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; color: var(--emerald2); background: rgba(0,200,150,.12); font-size: 28px; margin-bottom: 22px; }
-    .card h3 { font-size: 21px; margin-bottom: 10px; }
-    .card p { color: var(--text); font-size: 15px; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .portfolio-card { overflow: hidden; padding: 0; }
-    .portfolio-img { height: 190px; background: linear-gradient(135deg, rgba(0,200,150,.28), rgba(255,255,255,.08)); display: grid; place-items: center; color: var(--emerald2); font-weight: 800; }
-    .portfolio-content { padding: 24px; }
-    .pricing { background: rgba(255,255,255,.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .price-card { position: relative; }
-    .popular { border-color: rgba(0,230,170,.8); box-shadow: var(--shadow); transform: translateY(-10px); }
-    .badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--emerald); color: #06110e; padding: 7px 16px; border-radius: 999px; font-size: 12px; font-weight: 800; }
-    .price { font-size: 42px; font-weight: 800; margin: 18px 0; }
-    .list { list-style: none; margin: 24px 0; display: grid; gap: 12px; color: var(--text); }
-    .list li:before { content: '✓'; color: var(--emerald2); font-weight: 800; margin-right: 10px; }
-    .testimonials .card { min-height: auto; }
-    .stars { color: #FFD447; letter-spacing: 3px; margin-top: 18px; }
-    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 36px; align-items: start; }
-    .contact-item { display: flex; gap: 14px; margin: 20px 0; color: var(--text); }
-    form { display: grid; gap: 14px; }
-    input, textarea {
-      width: 100%; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--border);
-      background: rgba(255,255,255,.045); color: var(--white); outline: none; font-family: inherit;
+
+    .mock-browser {
+      height: 34px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      margin: -10px -10px 40px;
+      padding: 0 10px 18px;
     }
-    textarea { min-height: 150px; resize: vertical; }
-    input:focus, textarea:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(0,200,150,.12); }
-    footer { padding: 38px 0; border-top: 1px solid var(--border); color: var(--muted); }
-    .footer-grid { display: flex; justify-content: space-between; gap: 30px; align-items: center; flex-wrap: wrap; }
-    .whatsapp {
-      position: fixed; right: 22px; bottom: 22px; z-index: 20;
-      width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
-      background: linear-gradient(135deg, #25D366, var(--emerald2)); color: #06110e; font-size: 27px; font-weight: 800; box-shadow: 0 0 35px rgba(37,211,102,.5);
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--emerald);
+      opacity: 0.8;
     }
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .hero-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 62px; }
-      .cards, .portfolio-grid, .stats-grid { grid-template-columns: 1fr 1fr; }
+
+    .device-title {
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      font-weight: 900;
     }
-    @media (max-width: 620px) {
-      nav { height: 68px; }
-      .hero-card { min-height: 360px; padding: 16px; }
-      .cards, .portfolio-grid, .stats-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
-      .btn { width: 100%; }
-      .mock-title { font-size: 26px; }
-      section { padding: 62px 0; }
+
+    .device-title span {
+      color: var(--emerald);
+    }
+
+    .mini-card-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .mini-card strong {
+      display: block;
+      color: var(--text);
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    section {
+      padding: 82px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -1.6px;
+      margin-bottom: 10px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .pricing {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0,230,138,0.14), transparent 35%),
+        rgba(255,255,255,0.01);
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .price-card,
+    .service-card,
+    .why-card,
+    .contact-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      transition: 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card:hover,
+    .service-card:hover,
+    .why-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,230,138,0.55);
+      box-shadow: var(--shadow);
+    }
+
+    .popular {
+      border-color: rgba(0,230,138,0.85);
+      box-shadow: var(--shadow);
+      transform: scale(1.03);
+    }
+
+    .badge {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--emerald);
+      color: #031008;
+      padding: 7px 24px;
+      border-radius: 0 0 14px 14px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .price-icon {
+      width: 58px;
+      height: 58px;
+      margin: 18px auto 20px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--emerald);
+      border-radius: 50%;
+      color: var(--emerald);
+      font-size: 24px;
+      box-shadow: 0 0 28px rgba(0,230,138,0.22);
+    }
+
+    .price-card h3 {
+      text-align: center;
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .amount {
+      text-align: center;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin: 14px 0 24px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+      margin-bottom: 26px;
+      font-size: 14px;
+    }
+
+    .price-card li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .price-card .btn {
+      width: 100%;
+      padding: 13px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      min-height: 225px;
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      background: rgba(0,230,138,0.08);
+      color: var(--emerald);
+      font-size: 28px;
+      border: 1px solid rgba(0,230,138,0.3);
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .stats {
+      padding: 42px 0;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 22px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      color: var(--text);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .why-contact {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .why-card h2,
+    .contact-card h2 {
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .why-card p,
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .why-list {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+      color: #dce7e1;
+      margin-bottom: 26px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 20px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-item b {
+      color: var(--text);
+      display: block;
+    }
+
+    .contact-item span:first-child {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(0,230,138,0.1);
+      color: var(--emerald);
+      flex: 0 0 auto;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background: rgba(0,0,0,0.32);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 15px;
+      color: var(--text);
+      outline: none;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 126px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--emerald);
+      box-shadow: 0 0 0 3px rgba(0,230,138,0.1);
+    }
+
+    footer {
+      padding: 38px 0;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    footer p,
+    footer a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--emerald);
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .socials a {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--emerald);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .copyright {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--emerald);
+      color: #031008;
+      font-size: 27px;
+      box-shadow: var(--shadow);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    @media (max-width: 920px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .why-contact,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .price-grid,
+      .services-grid,
+      .stats-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .popular {
+        transform: none;
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      h1 {
+        letter-spacing: -1.8px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav {
+        height: 68px;
+      }
+
+      .logo small {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .mini-card-row {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card,
+      .service-card,
+      .why-card,
+      .contact-card {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="glow-bg"></div>
-  <div class="grid-bg"></div>
-
   <header>
-    <div class="container">
-      <nav>
-        <a href="#home" class="logo"><span class="logo-mark">RJ</span><span>RJ VISION</span></a>
-        <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a class="btn btn-secondary" href="#contact">Get In Touch ↗</a>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="RJ Vision Home">
+        <span class="logo-mark">RJ</span>
+        <span>
+          RJ VISION
+          <small>Where Ideas Become Digital Reality</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <a class="btn btn-outline" href="#contact">Let's Talk ↗</a>
     </div>
   </header>
 
-  <main id="home">
-    <section class="hero">
+  <main>
+    <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="tag">We build digital success</div>
-          <h1>Building Websites That <span>Grow Businesses</span></h1>
-          <p>RJ Vision creates modern, fast and mobile-friendly websites that help small businesses look professional, attract customers and grow online.</p>
+          <div class="eyebrow">Web Design & Development Agency</div>
+          <h1>Building Websites That <span class="gradient-text">Grow Businesses</span></h1>
+          <p>
+            We design and develop modern, fast and responsive websites that help businesses
+            attract more customers, build trust and grow online.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Get Started ↗</a>
-            <a class="btn btn-secondary" href="#portfolio">View Portfolio ↗</a>
+            <a class="btn btn-primary" href="#pricing">Get Started ↗</a>
+            <a class="btn btn-outline" href="#contact">Contact Us ↗</a>
           </div>
-          <div class="features">
-            <span><i class="dot"></i> Modern Design</span>
-            <span><i class="dot"></i> Fast Loading</span>
-            <span><i class="dot"></i> SEO Ready</span>
-            <span><i class="dot"></i> Mobile Friendly</span>
+
+          <div class="features-row">
+            <span><b class="check">✓</b> Modern Design</span>
+            <span><b class="check">✓</b> Lightning Fast</span>
+            <span><b class="check">✓</b> SEO Optimized</span>
+            <span><b class="check">✓</b> Mobile Friendly</span>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="browser">
-            <div class="browser-top"><span class="circle"></span><span class="circle"></span><span class="circle"></span></div>
-            <div class="browser-body">
-              <div class="tag">RJ Vision Studio</div>
-              <div class="mock-title">Digital Solutions For Your Business</div>
-              <div class="mock-line"></div>
-              <div class="mock-line short"></div>
-              <div class="mock-grid">
-                <div class="mini-card"></div>
-                <div class="mini-card"></div>
-                <div class="mini-card"></div>
-                <div class="mini-card"></div>
+
+        <div class="hero-card" aria-label="Website design preview">
+          <div class="hero-card-inner">
+            <div>
+              <div class="mock-browser">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="device-title">
+                We Build <span>Digital Experiences</span> That Drive Results.
+              </div>
+            </div>
+
+            <div class="mini-card-row">
+              <div class="mini-card">
+                <strong>95+</strong>
+                Performance Score
+              </div>
+              <div class="mini-card">
+                <strong>100%</strong>
+                Responsive Layout
+              </div>
+              <div class="mini-card">
+                <strong>SEO</strong>
+                Search Ready
+              </div>
+              <div class="mini-card">
+                <strong>24/7</strong>
+                Online Presence
               </div>
             </div>
           </div>
@@ -226,116 +823,244 @@
       </div>
     </section>
 
-    <div class="stats">
-      <div class="container stats-grid">
-        <div class="stat"><h3>10+</h3><p>Website Concepts</p></div>
-        <div class="stat"><h3>100%</h3><p>Responsive Design</p></div>
-        <div class="stat"><h3>24/7</h3><p>Online Presence</p></div>
-        <div class="stat"><h3>SEO</h3><p>Basic Setup Included</p></div>
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Pricing Plans</div>
+          <h2>Simple, Transparent Pricing</h2>
+          <p>Choose the right plan for your business needs.</p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <div class="price-icon">✦</div>
+            <h3>Basic Plan</h3>
+            <div class="amount">₹5,000</div>
+            <ul>
+              <li><span class="check">✓</span> 1–5 page website</li>
+              <li><span class="check">✓</span> Responsive design</li>
+              <li><span class="check">✓</span> Contact form</li>
+              <li><span class="check">✓</span> Social media links</li>
+              <li><span class="check">✓</span> Basic SEO</li>
+              <li><span class="check">✓</span> 1 revision</li>
+              <li><span class="check">✓</span> No domain / business email</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Get Started ↗</a>
+          </article>
+
+          <article class="price-card popular">
+            <div class="badge">Most Popular</div>
+            <div class="price-icon">🚀</div>
+            <h3>Professional Plan</h3>
+            <div class="amount">₹10,000</div>
+            <ul>
+              <li><span class="check">✓</span> Everything in Basic Plan</li>
+              <li><span class="check">✓</span> Custom domain setup</li>
+              <li><span class="check">✓</span> Up to 8 pages</li>
+              <li><span class="check">✓</span> Branded email setup guidance</li>
+              <li><span class="check">✓</span> Basic analytics</li>
+              <li><span class="check">✓</span> 2 revisions</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Get Started ↗</a>
+          </article>
+
+          <article class="price-card">
+            <div class="price-icon">♛</div>
+            <h3>Maintenance Plan</h3>
+            <div class="amount">₹20,000</div>
+            <ul>
+              <li><span class="check">✓</span> Continuous changes</li>
+              <li><span class="check">✓</span> Monthly updates</li>
+              <li><span class="check">✓</span> Priority support</li>
+              <li><span class="check">✓</span> Analytics monthly snapshot</li>
+              <li><span class="check">✓</span> Uptime monitoring</li>
+              <li><span class="check">✓</span> 6 revisions / quarter</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Get Started ↗</a>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
 
     <section id="services">
       <div class="container">
         <div class="section-head">
-          <div class="tag">Services</div>
-          <h2>What <span>We Do</span></h2>
-          <p>End-to-end website design and development for businesses that want a professional online presence.</p>
+          <div class="eyebrow">Services</div>
+          <h2>What We Do</h2>
+          <p>We provide end-to-end digital solutions for your business.</p>
         </div>
-        <div class="cards">
-          <div class="card"><div class="icon">💻</div><h3>Business Websites</h3><p>Professional websites that explain your services and help customers contact you quickly.</p></div>
-          <div class="card"><div class="icon">🛒</div><h3>E-commerce Websites</h3><p>Online store layouts for products, catalogues and conversion-focused product sections.</p></div>
-          <div class="card"><div class="icon">📷</div><h3>Photography Websites</h3><p>Elegant portfolio and gallery websites for studios, photographers and creators.</p></div>
-          <div class="card"><div class="icon">🍽️</div><h3>Restaurant Websites</h3><p>Menu, location, ordering links, WhatsApp button and customer-friendly restaurant pages.</p></div>
-          <div class="card"><div class="icon">🏥</div><h3>Clinic Websites</h3><p>Clean healthcare websites with appointment CTAs, doctor profiles and trust-building sections.</p></div>
-          <div class="card"><div class="icon">🏢</div><h3>Company Websites</h3><p>Corporate websites that present your brand, work, services and contact details professionally.</p></div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Business Websites</h3>
+            <p>Professional websites that build trust and grow your business online.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🛒</div>
+            <h3>E-commerce Websites</h3>
+            <p>Sell products online with clean layouts and powerful store pages.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📷</div>
+            <h3>Photography Websites</h3>
+            <p>Showcase your photos with elegant galleries and mobile-first design.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🍽️</div>
+            <h3>Restaurant Websites</h3>
+            <p>Attract more customers with menu, location, timing and WhatsApp links.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏥</div>
+            <h3>Clinic Websites</h3>
+            <p>Build trust with patients using clean, modern and informative pages.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3>Company Websites</h3>
+            <p>Corporate websites that represent your brand professionally.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag">Portfolio</div>
-          <h2>Our Recent <span>Work</span></h2>
-          <p>Sample website categories RJ Vision can build for local businesses and growing brands.</p>
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <strong>50+</strong>
+          <span>Projects Capacity</span>
         </div>
-        <div class="portfolio-grid">
-          <div class="card portfolio-card"><div class="portfolio-img">STUDIO WEBSITE</div><div class="portfolio-content"><h3>Sai Photo Studio</h3><p>Photography studio website with gallery, services and contact section.</p></div></div>
-          <div class="card portfolio-card"><div class="portfolio-img">AGENCY WEBSITE</div><div class="portfolio-content"><h3>RJ Vision</h3><p>Premium agency website with pricing, services and lead generation sections.</p></div></div>
-          <div class="card portfolio-card"><div class="portfolio-img">BUSINESS WEBSITE</div><div class="portfolio-content"><h3>Local Business</h3><p>Fast, responsive website design for shops, clinics, restaurants and companies.</p></div></div>
+        <div class="stat">
+          <strong>30+</strong>
+          <span>Business Niches</span>
         </div>
-      </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag">Pricing</div>
-          <h2>Simple, Transparent <span>Pricing</span></h2>
-          <p>Choose the right plan based on your business needs.</p>
+        <div class="stat">
+          <strong>2+</strong>
+          <span>Years Experience</span>
         </div>
-        <div class="cards">
-          <div class="card price-card"><h3>Basic</h3><p>For small businesses</p><div class="price">₹5,000</div><ul class="list"><li>1–5 page website</li><li>Responsive design</li><li>Contact form</li><li>Basic SEO</li><li>Vercel hosting setup</li></ul><a class="btn btn-secondary" href="#contact">Get Started</a></div>
-          <div class="card price-card popular"><div class="badge">Most Popular</div><h3>Professional</h3><p>For growing businesses</p><div class="price">₹10,000</div><ul class="list"><li>Up to 8 pages</li><li>Custom domain setup</li><li>WhatsApp integration</li><li>Analytics basic</li><li>2 revisions</li></ul><a class="btn btn-primary" href="#contact">Get Started</a></div>
-          <div class="card price-card"><h3>Maintenance</h3><p>For regular updates</p><div class="price">₹20,000</div><ul class="list"><li>Monthly updates</li><li>Priority support</li><li>Analytics snapshot</li><li>Uptime check</li><li>6 revisions/quarter</li></ul><a class="btn btn-secondary" href="#contact">Get Started</a></div>
+        <div class="stat">
+          <strong>98%</strong>
+          <span>Client Satisfaction Goal</span>
         </div>
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-head">
-          <div class="tag">Testimonials</div>
-          <h2>What Clients <span>Say</span></h2>
-        </div>
-        <div class="cards">
-          <div class="card"><p>“RJ Vision understood our requirement and delivered a clean, professional website.”</p><div class="stars">★★★★★</div></div>
-          <div class="card"><p>“The design was modern, fast and perfect for our business presentation.”</p><div class="stars">★★★★★</div></div>
-          <div class="card"><p>“Very smooth process from idea to live website with domain setup.”</p><div class="stars">★★★★★</div></div>
-        </div>
-      </div>
-    </section>
+    <section id="about">
+      <div class="container why-contact">
+        <article class="why-card">
+          <div class="eyebrow">About Us</div>
+          <h2>Why Choose RJ Vision?</h2>
+          <p>
+            We are passionate about creating digital experiences that not only look amazing
+            but also deliver practical business results.
+          </p>
 
-    <section id="contact">
-      <div class="container contact-grid">
-        <div>
-          <div class="tag">Contact</div>
-          <h2>Let's Build Something <span>Amazing</span></h2>
-          <p style="color:var(--text); margin-top:14px;">Have a project in mind? Contact RJ Vision and turn your business idea into a live website.</p>
-          <div class="contact-item"><strong>📧</strong><span>hello@rjvision.in</span></div>
-          <div class="contact-item"><strong>📍</strong><span>India</span></div>
-          <div class="contact-item"><strong>💬</strong><span>WhatsApp available for quick discussion</span></div>
-        </div>
-        <div class="card">
-          <form onsubmit="sendMessage(event)">
-            <input id="name" type="text" placeholder="Your Name" required>
-            <input id="email" type="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Tell us about your website requirement" required></textarea>
-            <button class="btn btn-primary" type="submit">Send Message ↗</button>
-          </form>
-        </div>
+          <ul class="why-list">
+            <li><span class="check">✓</span> User-centered designs</li>
+            <li><span class="check">✓</span> 100% responsive websites</li>
+            <li><span class="check">✓</span> Fast loading performance</li>
+            <li><span class="check">✓</span> SEO-friendly structure</li>
+            <li><span class="check">✓</span> Ongoing website support</li>
+          </ul>
+
+          <a class="btn btn-outline" href="#contact">Learn More ↗</a>
+        </article>
+
+        <article class="contact-card" id="contact">
+          <div class="eyebrow">Let's Connect</div>
+          <h2>Let's Build Something Amazing</h2>
+          <p>Have a project in mind? Let's talk and bring your ideas to life.</p>
+
+          <div class="contact-layout">
+            <div class="contact-info">
+              <div class="contact-item">
+                <span>☏</span>
+                <p><b>WhatsApp</b>+91 12345 67890</p>
+              </div>
+              <div class="contact-item">
+                <span>✉</span>
+                <p><b>Email</b>info@rjvision.in</p>
+              </div>
+              <div class="contact-item">
+                <span>⌖</span>
+                <p><b>Location</b>India</p>
+              </div>
+            </div>
+
+            <form onsubmit="sendMessage(event)">
+              <input id="name" type="text" placeholder="Your Name" required />
+              <input id="email" type="email" placeholder="Your Email" required />
+              <textarea id="message" placeholder="Your Message" required></textarea>
+              <button class="btn btn-primary" type="submit">Send Message ↗</button>
+            </form>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container footer-grid">
-      <div class="logo"><span class="logo-mark">RJ</span><span>RJ VISION</span></div>
-      <p>© 2026 RJ Vision. Building digital experiences that grow businesses.</p>
+      <div>
+        <a class="logo" href="#home">
+          <span class="logo-mark">RJ</span>
+          <span>
+            RJ VISION
+            <small>Where Ideas Become Digital Reality</small>
+          </span>
+        </a>
+        <p style="margin-top:14px;max-width:360px;">
+          Building professional websites for businesses that want to grow online.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <div class="footer-links" style="margin-top:12px;">
+          <a href="#home">Home</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#services">Services</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">⌘</a>
+          <a href="https://wa.me/911234567890" aria-label="WhatsApp">☏</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © 2026 RJ Vision. All Rights Reserved.
     </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hi%20RJ%20Vision,%20I%20need%20a%20website" target="_blank" aria-label="Chat on WhatsApp">☎</a>
+  <a class="whatsapp-float" href="https://wa.me/911234567890" target="_blank" aria-label="Chat on WhatsApp">☏</a>
 
   <script>
     function sendMessage(event) {
       event.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const text = `Hi RJ Vision, my name is ${name}. Email: ${email}. Requirement: ${message}`;
-      window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(text)}`, '_blank');
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const phoneNumber = "911234567890";
+      const text = `Hello RJ Vision,%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
+
+      window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
     }
   </script>
 </body>
